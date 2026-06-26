@@ -22,4 +22,4 @@ RUN pip3 install --no-cache-dir jupyterlab
 WORKDIR /workspace
 EXPOSE 8888
 
-CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token=''"]
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token=''", "--NotebookApp.allow_origin='*'", "--ServerApp.allow_origin='*'", "--ServerApp.disable_check_xsrf=True"]
